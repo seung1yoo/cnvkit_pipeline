@@ -1,0 +1,211 @@
+
+workdir: /BiO/BioPeople/baekip/BioProjects/StemCell_Project/MFDS-Human-C1-2018-08-TBD171103/202012301118_cnvkit
+target_bed: /BiO/BioResources/References/Human/hg19/targetkit/SureSelect_Human_All_Exon_V5.bed
+genome_fasta: /BiO/BioResources/References/Human/hg19/hg19.fa
+access_bed: /BiO/BioTools/cnvkit/data/access-5k-mappable.hg19.bed
+ref_flat: /BiO/BioPeople/baekip/BioResource/hg19/refFlat.txt
+ipsc57_bed: bin/ipsc_57_LBvsRef_Region.bed
+
+ordered_samples:
+  - H9ESP_44-1
+  - H9ESP_44-10
+  - H9ESP_44-2
+  - H9ESP_44-3
+  - H9ESP_44-4
+  - H9ESP_44-5
+  - H9ESP_44-6
+  - H9ESP_44-7
+  - H9ESP_44-8
+  - H9ESP_44-9
+  - H9ESP_75-1
+  - H9ESP_75-10
+  - H9ESP_75-2
+  - H9ESP_75-3
+  - H9ESP_75-4
+  - H9ESP_75-5
+  - H9ESP_75-6
+  - H9ESP_75-7
+  - H9ESP_75-8
+  - H9ESP_75-9
+  - HPS0076_48-1
+  - HPS0076_48-10
+  - HPS0076_48-2
+  - HPS0076_48-3
+  - HPS0076_48-4
+  - HPS0076_48-5
+  - HPS0076_48-6
+  - HPS0076_48-7
+  - HPS0076_48-8
+  - HPS0076_48-9
+  - HPS0076_68-1
+  - HPS0076_68-10
+  - HPS0076_68-2
+  - HPS0076_68-3
+  - HPS0076_68-4
+  - HPS0076_68-5
+  - HPS0076_68-6
+  - HPS0076_68-7
+  - HPS0076_68-8
+  - HPS0076_68-9
+
+samples:
+  H9ESP_44-10:
+    tbi_id: TN1808L0024-10
+    bam: /BiO/BioPeople/baekip/BioProjects/StemCell_Project/MFDS-Human-C1-2018-08-TBD171103/result/06-1_picard_merge/TN1808L0024-10/TN1808L0024-10.merge.bam
+    bai: /BiO/BioPeople/baekip/BioProjects/StemCell_Project/MFDS-Human-C1-2018-08-TBD171103/result/06-1_picard_merge/TN1808L0024-10/TN1808L0024-10.merge.bam.bai
+  H9ESP_44-1:
+    tbi_id: TN1808L0024-1
+    bam: /BiO/BioPeople/baekip/BioProjects/StemCell_Project/MFDS-Human-C1-2018-08-TBD171103/result/06-1_picard_merge/TN1808L0024-1/TN1808L0024-1.merge.bam
+    bai: /BiO/BioPeople/baekip/BioProjects/StemCell_Project/MFDS-Human-C1-2018-08-TBD171103/result/06-1_picard_merge/TN1808L0024-1/TN1808L0024-1.merge.bam.bai
+  H9ESP_44-2:
+    tbi_id: TN1808L0024-2
+    bam: /BiO/BioPeople/baekip/BioProjects/StemCell_Project/MFDS-Human-C1-2018-08-TBD171103/result/06-1_picard_merge/TN1808L0024-2/TN1808L0024-2.merge.bam
+    bai: /BiO/BioPeople/baekip/BioProjects/StemCell_Project/MFDS-Human-C1-2018-08-TBD171103/result/06-1_picard_merge/TN1808L0024-2/TN1808L0024-2.merge.bam.bai
+  H9ESP_44-3:
+    tbi_id: TN1808L0024-3
+    bam: /BiO/BioPeople/baekip/BioProjects/StemCell_Project/MFDS-Human-C1-2018-08-TBD171103/result/06-1_picard_merge/TN1808L0024-3/TN1808L0024-3.merge.bam
+    bai: /BiO/BioPeople/baekip/BioProjects/StemCell_Project/MFDS-Human-C1-2018-08-TBD171103/result/06-1_picard_merge/TN1808L0024-3/TN1808L0024-3.merge.bam.bai
+  H9ESP_44-4:
+    tbi_id: TN1808L0024-4
+    bam: /BiO/BioPeople/baekip/BioProjects/StemCell_Project/MFDS-Human-C1-2018-08-TBD171103/result/06-1_picard_merge/TN1808L0024-4/TN1808L0024-4.merge.bam
+    bai: /BiO/BioPeople/baekip/BioProjects/StemCell_Project/MFDS-Human-C1-2018-08-TBD171103/result/06-1_picard_merge/TN1808L0024-4/TN1808L0024-4.merge.bam.bai
+  H9ESP_44-5:
+    tbi_id: TN1808L0024-5
+    bam: /BiO/BioPeople/baekip/BioProjects/StemCell_Project/MFDS-Human-C1-2018-08-TBD171103/result/06-1_picard_merge/TN1808L0024-5/TN1808L0024-5.merge.bam
+    bai: /BiO/BioPeople/baekip/BioProjects/StemCell_Project/MFDS-Human-C1-2018-08-TBD171103/result/06-1_picard_merge/TN1808L0024-5/TN1808L0024-5.merge.bam.bai
+  H9ESP_44-6:
+    tbi_id: TN1808L0024-6
+    bam: /BiO/BioPeople/baekip/BioProjects/StemCell_Project/MFDS-Human-C1-2018-08-TBD171103/result/06-1_picard_merge/TN1808L0024-6/TN1808L0024-6.merge.bam
+    bai: /BiO/BioPeople/baekip/BioProjects/StemCell_Project/MFDS-Human-C1-2018-08-TBD171103/result/06-1_picard_merge/TN1808L0024-6/TN1808L0024-6.merge.bam.bai
+  H9ESP_44-7:
+    tbi_id: TN1808L0024-7
+    bam: /BiO/BioPeople/baekip/BioProjects/StemCell_Project/MFDS-Human-C1-2018-08-TBD171103/result/06-1_picard_merge/TN1808L0024-7/TN1808L0024-7.merge.bam
+    bai: /BiO/BioPeople/baekip/BioProjects/StemCell_Project/MFDS-Human-C1-2018-08-TBD171103/result/06-1_picard_merge/TN1808L0024-7/TN1808L0024-7.merge.bam.bai
+  H9ESP_44-8:
+    tbi_id: TN1808L0024-8
+    bam: /BiO/BioPeople/baekip/BioProjects/StemCell_Project/MFDS-Human-C1-2018-08-TBD171103/result/06-1_picard_merge/TN1808L0024-8/TN1808L0024-8.merge.bam
+    bai: /BiO/BioPeople/baekip/BioProjects/StemCell_Project/MFDS-Human-C1-2018-08-TBD171103/result/06-1_picard_merge/TN1808L0024-8/TN1808L0024-8.merge.bam.bai
+  H9ESP_44-9:
+    tbi_id: TN1808L0024-9
+    bam: /BiO/BioPeople/baekip/BioProjects/StemCell_Project/MFDS-Human-C1-2018-08-TBD171103/result/06-1_picard_merge/TN1808L0024-9/TN1808L0024-9.merge.bam
+    bai: /BiO/BioPeople/baekip/BioProjects/StemCell_Project/MFDS-Human-C1-2018-08-TBD171103/result/06-1_picard_merge/TN1808L0024-9/TN1808L0024-9.merge.bam.bai
+  H9ESP_75-10:
+    tbi_id: TN1808L0025-10
+    bam: /BiO/BioPeople/baekip/BioProjects/StemCell_Project/MFDS-Human-C1-2018-08-TBD171103/result/06-1_picard_merge/TN1808L0025-10/TN1808L0025-10.merge.bam
+    bai: /BiO/BioPeople/baekip/BioProjects/StemCell_Project/MFDS-Human-C1-2018-08-TBD171103/result/06-1_picard_merge/TN1808L0025-10/TN1808L0025-10.merge.bam.bai
+  H9ESP_75-1:
+    tbi_id: TN1808L0025-1
+    bam: /BiO/BioPeople/baekip/BioProjects/StemCell_Project/MFDS-Human-C1-2018-08-TBD171103/result/06-1_picard_merge/TN1808L0025-1/TN1808L0025-1.merge.bam
+    bai: /BiO/BioPeople/baekip/BioProjects/StemCell_Project/MFDS-Human-C1-2018-08-TBD171103/result/06-1_picard_merge/TN1808L0025-1/TN1808L0025-1.merge.bam.bai
+  H9ESP_75-2:
+    tbi_id: TN1808L0025-2
+    bam: /BiO/BioPeople/baekip/BioProjects/StemCell_Project/MFDS-Human-C1-2018-08-TBD171103/result/06-1_picard_merge/TN1808L0025-2/TN1808L0025-2.merge.bam
+    bai: /BiO/BioPeople/baekip/BioProjects/StemCell_Project/MFDS-Human-C1-2018-08-TBD171103/result/06-1_picard_merge/TN1808L0025-2/TN1808L0025-2.merge.bam.bai
+  H9ESP_75-3:
+    tbi_id: TN1808L0025-3
+    bam: /BiO/BioPeople/baekip/BioProjects/StemCell_Project/MFDS-Human-C1-2018-08-TBD171103/result/06-1_picard_merge/TN1808L0025-3/TN1808L0025-3.merge.bam
+    bai: /BiO/BioPeople/baekip/BioProjects/StemCell_Project/MFDS-Human-C1-2018-08-TBD171103/result/06-1_picard_merge/TN1808L0025-3/TN1808L0025-3.merge.bam.bai
+  H9ESP_75-4:
+    tbi_id: TN1808L0025-4
+    bam: /BiO/BioPeople/baekip/BioProjects/StemCell_Project/MFDS-Human-C1-2018-08-TBD171103/result/06-1_picard_merge/TN1808L0025-4/TN1808L0025-4.merge.bam
+    bai: /BiO/BioPeople/baekip/BioProjects/StemCell_Project/MFDS-Human-C1-2018-08-TBD171103/result/06-1_picard_merge/TN1808L0025-4/TN1808L0025-4.merge.bam.bai
+  H9ESP_75-5:
+    tbi_id: TN1808L0025-5
+    bam: /BiO/BioPeople/baekip/BioProjects/StemCell_Project/MFDS-Human-C1-2018-08-TBD171103/result/06-1_picard_merge/TN1808L0025-5/TN1808L0025-5.merge.bam
+    bai: /BiO/BioPeople/baekip/BioProjects/StemCell_Project/MFDS-Human-C1-2018-08-TBD171103/result/06-1_picard_merge/TN1808L0025-5/TN1808L0025-5.merge.bam.bai
+  H9ESP_75-6:
+    tbi_id: TN1808L0025-6
+    bam: /BiO/BioPeople/baekip/BioProjects/StemCell_Project/MFDS-Human-C1-2018-08-TBD171103/result/06-1_picard_merge/TN1808L0025-6/TN1808L0025-6.merge.bam
+    bai: /BiO/BioPeople/baekip/BioProjects/StemCell_Project/MFDS-Human-C1-2018-08-TBD171103/result/06-1_picard_merge/TN1808L0025-6/TN1808L0025-6.merge.bam.bai
+  H9ESP_75-7:
+    tbi_id: TN1808L0025-7
+    bam: /BiO/BioPeople/baekip/BioProjects/StemCell_Project/MFDS-Human-C1-2018-08-TBD171103/result/06-1_picard_merge/TN1808L0025-7/TN1808L0025-7.merge.bam
+    bai: /BiO/BioPeople/baekip/BioProjects/StemCell_Project/MFDS-Human-C1-2018-08-TBD171103/result/06-1_picard_merge/TN1808L0025-7/TN1808L0025-7.merge.bam.bai
+  H9ESP_75-8:
+    tbi_id: TN1808L0025-8
+    bam: /BiO/BioPeople/baekip/BioProjects/StemCell_Project/MFDS-Human-C1-2018-08-TBD171103/result/06-1_picard_merge/TN1808L0025-8/TN1808L0025-8.merge.bam
+    bai: /BiO/BioPeople/baekip/BioProjects/StemCell_Project/MFDS-Human-C1-2018-08-TBD171103/result/06-1_picard_merge/TN1808L0025-8/TN1808L0025-8.merge.bam.bai
+  H9ESP_75-9:
+    tbi_id: TN1808L0025-9
+    bam: /BiO/BioPeople/baekip/BioProjects/StemCell_Project/MFDS-Human-C1-2018-08-TBD171103/result/06-1_picard_merge/TN1808L0025-9/TN1808L0025-9.merge.bam
+    bai: /BiO/BioPeople/baekip/BioProjects/StemCell_Project/MFDS-Human-C1-2018-08-TBD171103/result/06-1_picard_merge/TN1808L0025-9/TN1808L0025-9.merge.bam.bai
+  HPS0076_48-10:
+    tbi_id: TN1808L0030-10
+    bam: /BiO/BioPeople/baekip/BioProjects/StemCell_Project/MFDS-Human-C1-2018-08-TBD171103/result/06-1_picard_merge/TN1808L0030-10/TN1808L0030-10.merge.bam
+    bai: /BiO/BioPeople/baekip/BioProjects/StemCell_Project/MFDS-Human-C1-2018-08-TBD171103/result/06-1_picard_merge/TN1808L0030-10/TN1808L0030-10.merge.bam.bai
+  HPS0076_48-1:
+    tbi_id: TN1808L0030-1
+    bam: /BiO/BioPeople/baekip/BioProjects/StemCell_Project/MFDS-Human-C1-2018-08-TBD171103/result/06-1_picard_merge/TN1808L0030-1/TN1808L0030-1.merge.bam
+    bai: /BiO/BioPeople/baekip/BioProjects/StemCell_Project/MFDS-Human-C1-2018-08-TBD171103/result/06-1_picard_merge/TN1808L0030-1/TN1808L0030-1.merge.bam.bai
+  HPS0076_48-2:
+    tbi_id: TN1808L0030-2
+    bam: /BiO/BioPeople/baekip/BioProjects/StemCell_Project/MFDS-Human-C1-2018-08-TBD171103/result/06-1_picard_merge/TN1808L0030-2/TN1808L0030-2.merge.bam
+    bai: /BiO/BioPeople/baekip/BioProjects/StemCell_Project/MFDS-Human-C1-2018-08-TBD171103/result/06-1_picard_merge/TN1808L0030-2/TN1808L0030-2.merge.bam.bai
+  HPS0076_48-3:
+    tbi_id: TN1808L0030-3
+    bam: /BiO/BioPeople/baekip/BioProjects/StemCell_Project/MFDS-Human-C1-2018-08-TBD171103/result/06-1_picard_merge/TN1808L0030-3/TN1808L0030-3.merge.bam
+    bai: /BiO/BioPeople/baekip/BioProjects/StemCell_Project/MFDS-Human-C1-2018-08-TBD171103/result/06-1_picard_merge/TN1808L0030-3/TN1808L0030-3.merge.bam.bai
+  HPS0076_48-4:
+    tbi_id: TN1808L0030-4
+    bam: /BiO/BioPeople/baekip/BioProjects/StemCell_Project/MFDS-Human-C1-2018-08-TBD171103/result/06-1_picard_merge/TN1808L0030-4/TN1808L0030-4.merge.bam
+    bai: /BiO/BioPeople/baekip/BioProjects/StemCell_Project/MFDS-Human-C1-2018-08-TBD171103/result/06-1_picard_merge/TN1808L0030-4/TN1808L0030-4.merge.bam.bai
+  HPS0076_48-5:
+    tbi_id: TN1808L0030-5
+    bam: /BiO/BioPeople/baekip/BioProjects/StemCell_Project/MFDS-Human-C1-2018-08-TBD171103/result/06-1_picard_merge/TN1808L0030-5/TN1808L0030-5.merge.bam
+    bai: /BiO/BioPeople/baekip/BioProjects/StemCell_Project/MFDS-Human-C1-2018-08-TBD171103/result/06-1_picard_merge/TN1808L0030-5/TN1808L0030-5.merge.bam.bai
+  HPS0076_48-6:
+    tbi_id: TN1808L0030-6
+    bam: /BiO/BioPeople/baekip/BioProjects/StemCell_Project/MFDS-Human-C1-2018-08-TBD171103/result/06-1_picard_merge/TN1808L0030-6/TN1808L0030-6.merge.bam
+    bai: /BiO/BioPeople/baekip/BioProjects/StemCell_Project/MFDS-Human-C1-2018-08-TBD171103/result/06-1_picard_merge/TN1808L0030-6/TN1808L0030-6.merge.bam.bai
+  HPS0076_48-7:
+    tbi_id: TN1808L0030-7
+    bam: /BiO/BioPeople/baekip/BioProjects/StemCell_Project/MFDS-Human-C1-2018-08-TBD171103/result/06-1_picard_merge/TN1808L0030-7/TN1808L0030-7.merge.bam
+    bai: /BiO/BioPeople/baekip/BioProjects/StemCell_Project/MFDS-Human-C1-2018-08-TBD171103/result/06-1_picard_merge/TN1808L0030-7/TN1808L0030-7.merge.bam.bai
+  HPS0076_48-8:
+    tbi_id: TN1808L0030-8
+    bam: /BiO/BioPeople/baekip/BioProjects/StemCell_Project/MFDS-Human-C1-2018-08-TBD171103/result/06-1_picard_merge/TN1808L0030-8/TN1808L0030-8.merge.bam
+    bai: /BiO/BioPeople/baekip/BioProjects/StemCell_Project/MFDS-Human-C1-2018-08-TBD171103/result/06-1_picard_merge/TN1808L0030-8/TN1808L0030-8.merge.bam.bai
+  HPS0076_48-9:
+    tbi_id: TN1808L0030-9
+    bam: /BiO/BioPeople/baekip/BioProjects/StemCell_Project/MFDS-Human-C1-2018-08-TBD171103/result/06-1_picard_merge/TN1808L0030-9/TN1808L0030-9.merge.bam
+    bai: /BiO/BioPeople/baekip/BioProjects/StemCell_Project/MFDS-Human-C1-2018-08-TBD171103/result/06-1_picard_merge/TN1808L0030-9/TN1808L0030-9.merge.bam.bai
+  HPS0076_68-10:
+    tbi_id: TN1808L0031-10
+    bam: /BiO/BioPeople/baekip/BioProjects/StemCell_Project/MFDS-Human-C1-2018-08-TBD171103/result/06-1_picard_merge/TN1808L0031-10/TN1808L0031-10.merge.bam
+    bai: /BiO/BioPeople/baekip/BioProjects/StemCell_Project/MFDS-Human-C1-2018-08-TBD171103/result/06-1_picard_merge/TN1808L0031-10/TN1808L0031-10.merge.bam.bai
+  HPS0076_68-1:
+    tbi_id: TN1808L0031-1
+    bam: /BiO/BioPeople/baekip/BioProjects/StemCell_Project/MFDS-Human-C1-2018-08-TBD171103/result/06-1_picard_merge/TN1808L0031-1/TN1808L0031-1.merge.bam
+    bai: /BiO/BioPeople/baekip/BioProjects/StemCell_Project/MFDS-Human-C1-2018-08-TBD171103/result/06-1_picard_merge/TN1808L0031-1/TN1808L0031-1.merge.bam.bai
+  HPS0076_68-2:
+    tbi_id: TN1808L0031-2
+    bam: /BiO/BioPeople/baekip/BioProjects/StemCell_Project/MFDS-Human-C1-2018-08-TBD171103/result/06-1_picard_merge/TN1808L0031-2/TN1808L0031-2.merge.bam
+    bai: /BiO/BioPeople/baekip/BioProjects/StemCell_Project/MFDS-Human-C1-2018-08-TBD171103/result/06-1_picard_merge/TN1808L0031-2/TN1808L0031-2.merge.bam.bai
+  HPS0076_68-3:
+    tbi_id: TN1808L0031-3
+    bam: /BiO/BioPeople/baekip/BioProjects/StemCell_Project/MFDS-Human-C1-2018-08-TBD171103/result/06-1_picard_merge/TN1808L0031-3/TN1808L0031-3.merge.bam
+    bai: /BiO/BioPeople/baekip/BioProjects/StemCell_Project/MFDS-Human-C1-2018-08-TBD171103/result/06-1_picard_merge/TN1808L0031-3/TN1808L0031-3.merge.bam.bai
+  HPS0076_68-4:
+    tbi_id: TN1808L0031-4
+    bam: /BiO/BioPeople/baekip/BioProjects/StemCell_Project/MFDS-Human-C1-2018-08-TBD171103/result/06-1_picard_merge/TN1808L0031-4/TN1808L0031-4.merge.bam
+    bai: /BiO/BioPeople/baekip/BioProjects/StemCell_Project/MFDS-Human-C1-2018-08-TBD171103/result/06-1_picard_merge/TN1808L0031-4/TN1808L0031-4.merge.bam.bai
+  HPS0076_68-5:
+    tbi_id: TN1808L0031-5
+    bam: /BiO/BioPeople/baekip/BioProjects/StemCell_Project/MFDS-Human-C1-2018-08-TBD171103/result/06-1_picard_merge/TN1808L0031-5/TN1808L0031-5.merge.bam
+    bai: /BiO/BioPeople/baekip/BioProjects/StemCell_Project/MFDS-Human-C1-2018-08-TBD171103/result/06-1_picard_merge/TN1808L0031-5/TN1808L0031-5.merge.bam.bai
+  HPS0076_68-6:
+    tbi_id: TN1808L0031-6
+    bam: /BiO/BioPeople/baekip/BioProjects/StemCell_Project/MFDS-Human-C1-2018-08-TBD171103/result/06-1_picard_merge/TN1808L0031-6/TN1808L0031-6.merge.bam
+    bai: /BiO/BioPeople/baekip/BioProjects/StemCell_Project/MFDS-Human-C1-2018-08-TBD171103/result/06-1_picard_merge/TN1808L0031-6/TN1808L0031-6.merge.bam.bai
+  HPS0076_68-7:
+    tbi_id: TN1808L0031-7
+    bam: /BiO/BioPeople/baekip/BioProjects/StemCell_Project/MFDS-Human-C1-2018-08-TBD171103/result/06-1_picard_merge/TN1808L0031-7/TN1808L0031-7.merge.bam
+    bai: /BiO/BioPeople/baekip/BioProjects/StemCell_Project/MFDS-Human-C1-2018-08-TBD171103/result/06-1_picard_merge/TN1808L0031-7/TN1808L0031-7.merge.bam.bai
+  HPS0076_68-8:
+    tbi_id: TN1808L0031-8
+    bam: /BiO/BioPeople/baekip/BioProjects/StemCell_Project/MFDS-Human-C1-2018-08-TBD171103/result/06-1_picard_merge/TN1808L0031-8/TN1808L0031-8.merge.bam
+    bai: /BiO/BioPeople/baekip/BioProjects/StemCell_Project/MFDS-Human-C1-2018-08-TBD171103/result/06-1_picard_merge/TN1808L0031-8/TN1808L0031-8.merge.bam.bai
+  HPS0076_68-9:
+    tbi_id: TN1808L0031-9
+    bam: /BiO/BioPeople/baekip/BioProjects/StemCell_Project/MFDS-Human-C1-2018-08-TBD171103/result/06-1_picard_merge/TN1808L0031-9/TN1808L0031-9.merge.bam
+    bai: /BiO/BioPeople/baekip/BioProjects/StemCell_Project/MFDS-Human-C1-2018-08-TBD171103/result/06-1_picard_merge/TN1808L0031-9/TN1808L0031-9.merge.bam.bai
