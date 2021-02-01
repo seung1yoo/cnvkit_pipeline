@@ -12,6 +12,12 @@ class Utils:
             for sample in self.config['ordered_samples']:
                 ls.append(f'analysis/inbam/{sample}/{sample}.bam')
                 ls.append(f'analysis/inbam/{sample}/{sample}.bai')
+        if 'run_qualimap_bamqc' in targets:
+            for sample in self.config['ordered_samples']:
+                ls.append(f'analysis/qualimap/{sample}/qualimapReport.html')
+        if 'run_qualimap_multibamqc' in targets:
+            ls.append(f'analysis/qualimap/multi/input_data.txt')
+            ls.append(f'analysis/qualimap/multi/multisampleBamQcReport.html')
         if 'bedtools_coverage' in targets:
             for sample in self.config['ordered_samples']:
                 ls.append(f'analysis/bedtools/{sample}/coverage.txt')
@@ -71,6 +77,8 @@ class Utils:
         if 'parse_cnvkit' in targets:
             ls.append(f'analysis/cnvkit/compbed/ref.ipsc57LBvsRef.bed')
             ls.append(f'analysis/cnvkit/compbed/comp.ipsc57LBvsRef.bed')
+        if 'cnvkit_heatmap' in targets:
+            ls.append(f'analysis/cnvkit/heatmap.png')
         return ls
 
 

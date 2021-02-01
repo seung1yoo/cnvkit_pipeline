@@ -84,13 +84,67 @@ class ParseCNVkit:
         self.samples = args.samples
         #
         self.fdic = self.path_finder()
+        self.g_dic = self.make_g_dic()
+        print(self.g_dic['DDX11L1'])
         #
-        self.ref_dic = self.parse_refbed(args.refbed)
-        self.seg_call_dic = self.parse_callcns()
-        self.sed_anno_dic = self.parse_annobed()
-        #
-        self.write_ref_bed(args.outdir)
-        self.write_comp_bed(args.outdir)
+        #self.ref_dic = self.parse_refbed(args.refbed)
+        #self.seg_call_dic = self.parse_callcns()
+        #self.sed_anno_dic = self.parse_annobed()
+        #self.write_ref_bed(args.outdir)
+        #self.write_comp_bed(args.outdir)
+
+    def make_g_dic(self):
+        g_dic = dict()
+        for sample, info_dic in self.fdic.items():
+            fn_callcns = info_dic['callcns']
+            for line in open(fn_callcns):
+                items = line.rstrip('\n').split('\t')
+                #chromosome start end gene log2 ci_hi ci_lo cn depth probes weight
+                if items[0] in ['chromosome']:
+                    idx_dic = dict()
+                    for idx, item in enumerate(items):
+                        idx_dic.setdefault(item, idx)
+                    continue
+                _seg_id = [sample]
+                _seg_id.append(items[idx_dic['chromosome']])
+                _seg_id.append(items[idx_dic['start']])
+                _seg_id.append(items[idx_dic['end']])
+                seg_id = '_'.join(_seg_id)
+                log2 = items[idx_dic['log2']]
+                for gene in items[idx_dic['gene']].split(','):
+                    #g_dic.setdefault(gene, {}).setdefault(seg_id, float(log2))
+                    g_dic.setdefault(gene, {})
+                    if not sample in g_dic[gene]:
+                        g_dic[gene].setdefault(sample, float(log2))
+                    else:
+                        print(f'duplicated gene id in a sample, {gene}')
+                        print(f'Current : {g_dic[gene]}')
+                        print(f'Found : {seg_id} {log2}')
+                        #sys.exit()
+                        pass
+        return g_dic
+
+
+
+
+
+
+    def path_finder(self):
+        fdic = dict()
+        for sample in self.samples:
+            callcns = f'analysis/cnvkit/{sample}/{sample}.call.cns'
+            if os.path.isfile(callcns):
+                fdic.setdefault(sample, {}).setdefault('callcns', callcns)
+            else:
+                print(f'Error:Could not found {callcns}')
+                sys.exit()
+            annobed = f'analysis/cnvkit/{sample}/{sample}.call.anno.bed'
+            if os.path.isfile(annobed):
+                fdic.setdefault(sample, {}).setdefault('annobed', annobed)
+            else:
+                print(f'Error:Could not found {callcns}')
+                sys.exit()
+        return fdic
 
     def write_comp_bed(self, outdir):
         outfn = os.path.join(outdir, 'comp.ipsc57LBvsRef.bed')
@@ -123,9 +177,6 @@ class ParseCNVkit:
         items = [region.split(':')[0]]
         items.extend(region.split(':')[1].split('_'))
         return items
-
-
-
 
     def parse_annobed(self):
         _dic = dict()
@@ -198,22 +249,6 @@ class ParseCNVkit:
             ref_dic.setdefault(region, f'{state} {state_desc}')
         return ref_dic
 
-    def path_finder(self):
-        fdic = dict()
-        for sample in self.samples:
-            callcns = f'analysis/cnvkit/{sample}/{sample}.call.cns'
-            if os.path.isfile(callcns):
-                fdic.setdefault(sample, {}).setdefault('callcns', callcns)
-            else:
-                print(f'Error:Could not found {callcns}')
-                sys.exit()
-            annobed = f'analysis/cnvkit/{sample}/{sample}.call.anno.bed'
-            if os.path.isfile(annobed):
-                fdic.setdefault(sample, {}).setdefault('annobed', annobed)
-            else:
-                print(f'Error:Could not found {callcns}')
-                sys.exit()
-        return fdic
 
 
 

@@ -11,6 +11,8 @@ utils = Utils(config)
 
 targets = list()
 targets.append('symlink_bam')
+targets.append('run_qualimap_bamqc')
+targets.append('run_qualimap_multibamqc')
 #targets.append('bedtools_coverage')
 #targets.append('bedtools_coverage_bed')
 #targets.append('bedtools_genomecov')
@@ -29,7 +31,8 @@ targets.append('cnvkit_call_anno')
 targets.append('cnvkit_gainloss')
 targets.append('cnvkit_scatter')
 targets.append('cnvkit_diagram')
-targets.append('parse_cnvkit')
+targets.append('cnvkit_heatmap')
+#targets.append('parse_cnvkit')
 
 rule all:
     input: utils.get_targets(targets)
@@ -337,6 +340,74 @@ rule parse_cnvkit:
         " --refbed {params.bed}"
         " --outdir {params.outdir}"
         
+rule cnvkit_heatmap:
+    input:
+        callcns = expand('analysis/cnvkit/{sample}/{sample}.cns', sample=config['ordered_samples'])
+    output:
+        png = 'analysis/cnvkit/heatmap.png'
+    shell:
+        "cnvkit.py heatmap"
+        " {input.callcns}"
+        " -d"
+        " -o {output.png}"
+
+rule run_qualimap_bamqc:
+    input:
+        bam = 'analysis/inbam/{sample}/{sample}.bam',
+        bai = 'analysis/inbam/{sample}/{sample}.bai'
+    output:
+        html = 'analysis/qualimap/{sample}/qualimapReport.html',
+        outdir = directory('analysis/qualimap/{sample}')
+    params:
+        outdir = 'analysis/qualimap/{sample}',
+        memsize = '24G',
+        bed = config['target_bed']
+    threads: 8
+    shell:
+        'qualimap bamqc'
+        ' --java-mem-size={params.memsize}'
+        ' -bam {input.bam}'
+        #' -gff {params.bed}'
+        ' -outdir {params.outdir}'
+        ' -nt {threads}'
+
+rule prep_qualimap_multibamqc:
+    input:
+        qm_path = expand('analysis/qualimap/{sample}', sample=config['ordered_samples'])
+    output:
+        txt = 'analysis/qualimap/multi/input_data.txt'
+    run:
+        import os
+        outfh = open(output.txt, 'w')
+        for qm_path in input.qm_path:
+            qm_path = os.path.abspath(qm_path)
+            sample_name = qm_path.split('/')[-1]
+            group_name = qm_path.split('/')[-1].split('-')[0]
+            items = [sample_name, qm_path, group_name]
+            outfh.write("{0}\n".format('\t'.join(items)))
+        outfh.close()
+
+rule run_qualimap_multibamqc:
+    input:
+        txt = 'analysis/qualimap/multi/input_data.txt'
+    output:
+        html = 'analysis/qualimap/multi/multisampleBamQcReport.html'
+    params:
+        outdir = 'analysis/qualimap/multi',
+        memsize = '24G',
+        bed = config['target_bed']
+    threads: 8
+    shell:
+        'qualimap multi-bamqc'
+        ' --java-mem-size={params.memsize}'
+        ' --data {input.txt}'
+        ' -gff {params.bed}'
+        ' -outdir {params.outdir}'
+
+
+
+
+
 
 
 

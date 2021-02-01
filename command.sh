@@ -1,2 +1,2 @@
 python bin/config.py
-snakemake --cores all -s pipeline.snakefile
+snakemake --cores all -s pipeline.snakefile --printshellcmds
